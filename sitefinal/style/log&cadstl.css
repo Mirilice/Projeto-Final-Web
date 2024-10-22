@@ -47,7 +47,7 @@ body {
     flex: 1;
     padding: 10px 0;
     border: none;
-    background-color: #ddd;
+    background-color: #007bff;
     color: #333;
     cursor: pointer;
     font-size: 16px;
@@ -55,8 +55,8 @@ body {
 }
 
 .toggle-btn.active {
-    background-color:#333;
-    color: white;
+    background-color:#FFD700;
+    color: black;
 }
 
 .toggle-btn:not(:last-child) {
@@ -92,7 +92,7 @@ select option{
 .form button {
     width: 100%;
     padding: 12px;
-    background-color: #333;
+    background-color: rgb(60, 177, 79);
     border: none;
     color: white;
     font-size: 16px;
@@ -101,7 +101,7 @@ select option{
 }
 
 .form button:hover {
-    background-color: #7c7c7c;
+    background-color: #338d48;
 }
 
 /* Tornando o formulário visível quando alternado */

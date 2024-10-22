@@ -12,7 +12,7 @@
     <header class="topo">
         <div class="menu">
             <button id="atvmenu" class="menu button">
-                <img src="style/imagens/iconedemenu.png" alt="menu">
+                <img src="../att/iconedemenu.png" alt="menu">
                 <div id="barraltr" class="barraltr">
                     <h1>Menu</h1>
                     <ul>
@@ -29,11 +29,32 @@
         <!-- Logo -->
         <div class="logo">LOGO</div>
     </header>
-    <div id="contato">
-        <h1>Contatos</h1>
-        <p>loading.........</p>
+    <div class="contact-container">
+        <h2>Fale Conosco</h2>
+        <p>Estamos aqui para ouvir você! Se você tiver dúvidas, sugestões ou comentários, não hesite em nos contatar.</p>
+        
+        <form action="#" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    
+        <div class="contact-info">
+            <h3>Informações de Contato</h3>
+            <p>E-mail: mariaalicepco10@gmail.com</p>
+            <p>Telefone: (75) 9108-9458</p>
+            <p>Endereço: BR-324, Km 521 - Aviário, Feira de Santana - BA, 44096-486</p>
+        </div>
     </div>
-    <footer>
+    
+    <footer class="contato">
         <p>&copy; 2024. Todos os direitos reservados.</p>
     </footer>
 

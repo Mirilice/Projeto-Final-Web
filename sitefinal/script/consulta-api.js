@@ -7,7 +7,7 @@ document.querySelector('#buscarButton').addEventListener('click', function () {
         .then(response => response.json())
         .then(data => {
             const candidato = data.dados.find(c => c.nome.toLowerCase() === nome);
-            const infoDiv = document.querySelector('#info');
+            const infoDiv = document.querySelector('#numero'); // Atualiza para mostrar as infos na "tela" da urna
             const abasDiv = document.querySelector('#abas'); // Exibe as abas
             const despesasDiv = document.querySelector('#tab-despesas');
             const discursosDiv = document.querySelector('#tab-discursos');
@@ -28,10 +28,7 @@ document.querySelector('#buscarButton').addEventListener('click', function () {
                     <p><strong>Estado:</strong> ${candidato.siglaUf}</p>
                     <p><strong>Email:</strong> ${candidato.email || 'Não informado'}</p>
                 `;
-
-                // Exibe as abas
                 abasDiv.style.display = 'block';
-
                 // Busca e exibe as despesas do deputado
                 fetch(`https://dadosabertos.camara.leg.br/api/v2/deputados/${candidato.id}/despesas?ano=2024&mes=10`)
                     .then(response => response.json())
@@ -43,8 +40,7 @@ document.querySelector('#buscarButton').addEventListener('click', function () {
                                     <p><strong>Mês:</strong> ${despesa.mes}/${despesa.ano}</p>
                                     <p><strong>Tipo:</strong> ${despesa.tipoDespesa}</p>
                                     <p><strong>Valor:</strong> R$ ${despesa.valorLiquido.toFixed(2)}</p>
-                                    <hr>
-                                `;
+                                    <hr>`;
                             });
                         } else {
                             despesasHtml += '<p>Nenhuma despesa encontrada.</p>';

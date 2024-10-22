@@ -9,10 +9,12 @@
     <!-- Usando a fonte 'Roboto' do Google Fonts  -->
 </head>
 <body>
-    <header class="topo">
+    <div class="wrapper">
+        <div class="container">
+            <header class="topo">
         <div class="menu">
             <button id="atvmenu" class="menu button">
-                <img src="style/imagens/iconedemenu.png" alt="menu">
+                <img src="../att/iconedemenu.png" alt="menu">
                 <div id="barraltr" class="barraltr">
                     <h1>Menu</h1>
                     <ul>
@@ -29,8 +31,18 @@
         <!-- Logo -->
         <div class="logo">LOGO</div>
     </header>
+    <div id="abas" class="tabs" style="display: none;">
+            <div class="tab" data-tab="tab-despesas">Despesas</div>
+            <div class="tab" data-tab="tab-discursos">Discursos</div>
+            <div class="tab" data-tab="tab-ocupacoes">Ocupações</div>
+        </div>
 
+        <!-- Conteúdo de cada aba -->
+        <div id="tab-despesas" class="tab-content"></div>
+        <div id="tab-discursos" class="tab-content"></div>
+        <div id="tab-ocupacoes" class="tab-content"></div>
     <main>
+        
         <div class="urna-container">
             <div class="urna">    
                 <!-- Tela da urna -->
@@ -41,11 +53,12 @@
                 <div class="lado">
                     <!-- Teclado numérico -->
                     <div class="teclado">
-                        <button class="botao1"></button>
+                        <div class="botao1"><p class="consulta-urna">Consulta de Deputados <input type="text" id="nomeInput" placeholder="Digite o nome do deputado" />
+                            <button id="buscarButton">Buscar</button></p></div>
                         <div class="baixo">
-                            <button class="botao3"></button>
-                            <button class="botao2"></button>
-                            <button class="botao4"></button>
+                            <div class="botao3"></div>
+                            <div class="botao2"></div>
+                            <div class="botao4"></div>
                         </div>
                     </div>
         
@@ -58,23 +71,21 @@
                 </div>
             </div>
 
-            <div class="opcoesavc">
-                <button class="topicos">a</button>
-                <div class="content">
-                    <p>Este é o conteúdo que será exibido ao clicar no botão. Ele pode conter qualquer tipo de informação que você desejar Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti corporis rem, nam, voluptatum possimus vitae ipsa reprehenderit placeat ut vero optio omnis quas dolores cumque, repellendus quae consequatur modi voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ratione neque consequatur qui rerum quidem dolorum nemo, nulla nesciunt dolore mollitia tempore eveniet quae blanditiis! Sit voluptatem nam dolores qui. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque debitis voluptas dolor placeat minima tempore non dolores voluptate quas a laboriosam aliquid earum, odit veniam tempora, iusto corporis aut dolorem.</p>
-                </div>
-                <button class="topicos">b</button>
-                <button class="topicos">c</button>
-            </div>
-            
-        </div>
-                
+        
+
+        </div>  
     </main>
 
+        </div>
+        
     <footer>
         <p>&copy; 2024. Todos os direitos reservados.</p>
     </footer>
+    </div>
+    
 
     <script src="../script/menu_lateral.js"></script>
+    <script src="../script/incio.js"></script>
+    <script src="../script/consulta-api.js"></script>
 </body>
 </html>

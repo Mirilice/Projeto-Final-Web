@@ -1,4 +1,3 @@
-/* Reset básico para garantir uniformidade entre navegadores */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,9 +14,10 @@ html, body {
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
+    height: 100%;
 }
 header {
-    background-color: #333;
+    background-color: #bca128;
     color: #fff;
 }
 nav {
@@ -39,6 +39,7 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     flex: 1;
+    color: blue;
 }
 .menu{
     display: flex;
@@ -62,7 +63,7 @@ nav {
     left: -250px; /* Escondido inicialmente */
     width: 250px;
     height: 100%;
-    background-color: #333;
+    background-color: #3333337b;
     color: white;
     transition: left 0.3s;
     padding: 20px;
@@ -151,13 +152,57 @@ nav {
 
 /* Estilo do rodapé */
 footer {
-    background-color: #333;
+    background-color: #338d48;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    margin-top: 20px;
+}
+
+.about-container {
+    max-width: 800px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    background-color: #ffffff; /* Fundo branco para o container */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.193); /* Sombra suave */
+    margin-top: 82px;
+}
+
+/* Título */
+.about-container h2 {
+    font-size: 2em; /* Tamanho da fonte do título */
+    color: #007bff; /* Cor azul para o título */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+}
+
+/* Parágrafos */
+.about-container p {
+    margin-bottom: 20px; /* Espaço entre os parágrafos */
+}
+
+/* Links */
+.about-container a {
+    color: #007bff; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.about-container a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+footer.contato{
+    background-color: #338d48;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px;
+    position: relative;
 }
 
 /* Responsividade para telas menores */

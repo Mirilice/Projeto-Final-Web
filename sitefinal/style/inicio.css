@@ -4,6 +4,35 @@ html, body {
     height: 100%;
 }
 
+p.consulta-urna{
+    font-size: 20px;
+    color: wheat;
+    margin: 10px;
+}
+
+input[type="text"] {
+    width: calc(100%);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0a0909;
+    border-radius: 5px;
+}
+
+button#buscarButton {
+    width: 55%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 48px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
 main {
     height: 1000px;
     display: flex;
@@ -11,53 +40,9 @@ main {
     justify-content: center;
     width: 100%;
     height: 100%;
-}
-.opcoesavc{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    flex-direction: row;
-    z-index: 1;
-    padding-right: 5px;
-}
-.topicos{
-    transition: 0.4s;
-    background-color: #262626;
-    border: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    display: fixed;
-    width: 50px;
-    height: 40px;
-    background-color: rgb(91, 82, 214);
-    margin-left: 10px;
-}
-.topicos:hover{
-    background-color: rgb(68, 66, 173);
-    
+    margin-top: -42px;
 }
 
-.content{
-    max-height: 0;
-    display: block;
-    padding: 0 18px;
-    display: none;
-    background-color: #f1f1f1;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-}
-.content.show {
-    max-height: 70%; /* Altura máxima que o conteúdo pode ter */
-    display: block;
-    margin-top: 7px;
-    overflow-y: scroll;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    background-color: #ccc;
-}
 .urna-container {
     width: 55%;
     height: 500px;
@@ -232,3 +217,100 @@ main {
 .botao-branco:hover {
     background-color: #f0f0f0;
 }
+
+div#abas.tabs {
+    display: flex !important;
+}
+
+.tabs {
+    display: flex; 
+    margin-top: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab {
+    flex: 1; /* Faz com que cada aba ocupe o mesmo espaço */
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-bottom: none; /* Remove a borda inferior para parecer uma aba */
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+
+.tab:hover, .tab-active {
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Define a altura mínima como o tamanho da janela */
+}
+
+.content {
+    flex: 1; /* Faz o conteúdo crescer até o máximo possível */
+}
+
+
+/* Container do formulário */
+.contact-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.contact-container h2 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.contact-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Inputs e textarea */
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container textarea {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 4px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Espaço entre campos */
+}
+
+/* Botão de envio */
+.contact-container input[type="submit"] {
+    background-color: #007bff; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+
+.contact-container input[type="submit"]:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+/* Informações de contato */
+.contact-info {
+    margin-top: 20px; /* Espaço acima */
+}
+
