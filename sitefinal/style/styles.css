@@ -1,0 +1,190 @@
+/* Reset básico para garantir uniformidade entre navegadores */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.content {
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+}
+html, body {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+header {
+    background-color: #333;
+    color: #fff;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para tornar o menu flexível em telas menores */
+}
+/* Logo, menu e busca */
+.topo {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+}
+.logo {
+    padding-left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex: 1;
+}
+.menu{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.menu button{
+    align-items:initial;
+    background-color:unset;
+    border: none;
+    cursor: pointer;
+}
+.menu button img{
+    width: 40px;
+    height: 40px;
+}
+/*barra do menu*/
+.barraltr {
+    z-index: 3;
+    position: fixed;
+    left: -250px; /* Escondido inicialmente */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s;
+    padding: 20px;
+
+}
+
+.barraltr ul {
+    list-style-type: none;
+}
+
+.barraltr ul li {
+    margin: 15px 0;
+}
+
+.barraltr ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.barraltr.atv {
+    margin-top: -20px;
+    padding-top: 20px;
+    left: 0; /* Mostra o menu */
+    box-shadow: 7px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.barraltr ul li a:hover {
+    background-color: #575757; /* Cor ao passar o mouse */
+    color: #FFD700; /* Nova cor do texto ao passar o mouse */
+}
+
+.barraltr.atv {
+    left: 0; /* Mostra o menu */
+}
+.page {
+    display: none; /* Oculta todas as páginas por padrão */
+}
+
+.page.active {
+    display: block; /* Exibe a página ativa */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    width: 100%; /* Altera para 100% para telas menores */
+    max-width: 300px; /* Define um limite máximo para não ultrapassar o design */
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-box button {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-box button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Efeito ao focar no campo de busca */
+.search-box input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .barraltr {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .hero-section {
+        height: auto;
+        padding: 20px;
+    }
+
+    .inner-box {
+        padding: 20px;
+    }
+}

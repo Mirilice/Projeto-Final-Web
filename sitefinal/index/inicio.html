@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../style/inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Usando a fonte 'Roboto' do Google Fonts  -->
+</head>
+<body>
+    <header class="topo">
+        <div class="menu">
+            <button id="atvmenu" class="menu button">
+                <img src="style/imagens/iconedemenu.png" alt="menu">
+                <div id="barraltr" class="barraltr">
+                    <h1>Menu</h1>
+                    <ul>
+                        <li><a href="inicio.html" class="nav-link" >Inicio</a></li>
+                        <li><a href="perfil.html" class="nav-link" >Perfil</a></li>
+                        <li><a href="contato.html" class="nav-link" >Fale conosco</a></li>
+                        <li><a href="sobre.html" class="nav-link" >Sobre nós</a></li>
+                        <li><a href="logincadastro.html">Login</a></li> <!-- colocar condicional para esconcer o login se ja estiver logado -->
+                        <li><a href="#" class="nav-link" >logout</a></li> <!-- colocar condicional para esconcer o logout se nao estiver logado -->
+                    </ul>
+                </div>
+            </button>
+        </div>
+        <!-- Logo -->
+        <div class="logo">LOGO</div>
+    </header>
+
+    <main>
+        <div class="urna-container">
+            <div class="urna">    
+                <!-- Tela da urna -->
+                <div class="tela" id="telaUrna">
+                    <div id="numero" class="tela-candidato"></div>
+                </div>
+                
+                <div class="lado">
+                    <!-- Teclado numérico -->
+                    <div class="teclado">
+                        <button class="botao1"></button>
+                        <div class="baixo">
+                            <button class="botao3"></button>
+                            <button class="botao2"></button>
+                            <button class="botao4"></button>
+                        </div>
+                    </div>
+        
+                    <!-- Botões de ação -->
+                    <div class="botoes-acoes">
+                        <button class="botao-acao botao-branco" >Branco</button>
+                        <button class="botao-acao botao-laranja" >Corrige</button>
+                        <button class="botao-acao botao-verde" >Confirma</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="opcoesavc">
+                <button class="topicos">a</button>
+                <div class="content">
+                    <p>Este é o conteúdo que será exibido ao clicar no botão. Ele pode conter qualquer tipo de informação que você desejar Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti corporis rem, nam, voluptatum possimus vitae ipsa reprehenderit placeat ut vero optio omnis quas dolores cumque, repellendus quae consequatur modi voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ratione neque consequatur qui rerum quidem dolorum nemo, nulla nesciunt dolore mollitia tempore eveniet quae blanditiis! Sit voluptatem nam dolores qui. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque debitis voluptas dolor placeat minima tempore non dolores voluptate quas a laboriosam aliquid earum, odit veniam tempora, iusto corporis aut dolorem.</p>
+                </div>
+                <button class="topicos">b</button>
+                <button class="topicos">c</button>
+            </div>
+            
+        </div>
+                
+    </main>
+
+    <footer>
+        <p>&copy; 2024. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../script/menu_lateral.js"></script>
+</body>
+</html>
